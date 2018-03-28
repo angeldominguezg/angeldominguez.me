@@ -31,7 +31,9 @@ module.exports = {
   */
   plugins: [
     // Doc: https://github.com/creotip/vue-particles
-    { src: '~/plugins/vue-particles', ssr: false }
+    { src: '~/plugins/vue-particles', ssr: false },
+    // Doc: https://www.npmjs.com/package/vue-typer
+    { src: '~/plugins/vue-typer', ssr: false }
   ],
 
   /*

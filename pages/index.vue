@@ -22,7 +22,23 @@
       <b-col align-self="center" class="main-title">
         <div class="title-box">
           <h1>Angel Dominguez</h1>
-          <h4>Subtitle here!</h4>
+          <h4>
+            <vue-typer
+                :text='message'
+                :repeat='Infinity'
+                :shuffle='true'
+                initial-action='typing'
+                :pre-type-delay='70'
+                :type-delay='70'
+                :pre-erase-delay='2000'
+                :erase-delay='250'
+                erase-style='select-back'
+                :erase-on-complete='true'
+                caret-animation='blink'
+                @erased='onComplete'
+              >
+            </vue-typer>
+          </h4>
           <hr>
         </div>
       </b-col>
@@ -31,10 +47,37 @@
 </template>
 
 <script>
-
+export default {
+  data() {
+    return {
+      message: [
+        "Testing, testing... 1 2 3 ",
+        "Ok! i hope everything works fine  ;)",
+        "Ummm, Hello World!",
+        "Just in case haha"
+        ]
+    }
+  },
+  methods: {
+    onComplete: function() {
+      // handle event when VueTyper has finished all typing/erasing
+      this.message = 'bye'
+    }
+  }
+}
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Inconsolata');
+
+.title-box h1 {
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+}
+.title-box h4 {
+  font-family: 'Inconsolata', monospace;
+}
 
 .main-title {
   position: fixed;
