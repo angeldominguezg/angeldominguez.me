@@ -1,43 +1,47 @@
 <template>
   <b-container class="bv-example-row bv-example-row-flex-cols">
-    <vue-particles
-        color="#dedede"
-        :particleOpacity="0.7"
-        :particlesNumber="80"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#dedede"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-    </vue-particles>
+    <no-ssr>
+      <vue-particles
+          color="#dedede"
+          :particleOpacity="0.7"
+          :particlesNumber="80"
+          shapeType="circle"
+          :particleSize="4"
+          linesColor="#dedede"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push"
+        >
+      </vue-particles>
+    </no-ssr>
     <b-row>
       <b-col align-self="center" class="main-title">
         <div class="title-box">
           <h1>Angel Dominguez</h1>
           <h4>
-            <vue-typer
-                :text='message'
-                :repeat='Infinity'
-                :shuffle='true'
-                initial-action='typing'
-                :pre-type-delay='70'
-                :type-delay='70'
-                :pre-erase-delay='2000'
-                :erase-delay='250'
-                :erase-style='eraseStyle'
-                :erase-on-complete='true'
-                caret-animation='blink'
-                @erased='onComplete'
-              >
-            </vue-typer>
+            <no-ssr>
+              <vue-typer
+                  :text='message'
+                  :repeat='Infinity'
+                  :shuffle='true'
+                  initial-action='typing'
+                  :pre-type-delay='70'
+                  :type-delay='70'
+                  :pre-erase-delay='2000'
+                  :erase-delay='250'
+                  :erase-style='eraseStyle'
+                  :erase-on-complete='true'
+                  caret-animation='blink'
+                  @erased='onComplete'
+                >
+              </vue-typer>
+            </no-ssr>
           </h4>
           <hr/>
           <div class="text-center center-block">
@@ -63,7 +67,7 @@ export default {
         "Coffee - Drinker ☕️",
         "FORWARD - THINKER"
         ],
-        eraseStyle: ''
+        eraseStyle: 'select-all'
     }
   },
   methods: {
