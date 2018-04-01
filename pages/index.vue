@@ -32,14 +32,22 @@
                 :type-delay='70'
                 :pre-erase-delay='2000'
                 :erase-delay='250'
-                erase-style='select-back'
+                :erase-style='eraseStyle'
                 :erase-on-complete='true'
                 caret-animation='blink'
                 @erased='onComplete'
               >
             </vue-typer>
           </h4>
-          <hr>
+          <hr/>
+          <div class="text-center center-block">
+            <br />
+              <a href="https://www.facebook.com/bootsnipp"><i class="fa fa-github social"></i></a>
+              <a href="https://www.facebook.com/bootsnipp"><i class="fa fa-linkedin social"></i></a>
+              <a href="https://www.facebook.com/bootsnipp"><i class="fa fa-instagram social"></i></a>
+              <a href="https://twitter.com/bootsnipp"><i class="fa fa-twitter social"></i></a>
+              <a href="mailto:bootsnipp@gmail.com"><i class="fa fa-envelope social"></i></a>
+          </div>
         </div>
       </b-col>
     </b-row>
@@ -51,17 +59,23 @@ export default {
   data() {
     return {
       message: [
-        "Testing, testing... 1 2 3 ",
-        "Ok! i hope everything works fine  ;)",
-        "Ummm, Hello World!",
-        "Just in case haha"
-        ]
+        "SOFTWARE - DEVELOPER",
+        // "PASSIONATE - TECHNOLOGY",
+        "FORWARD - THINKER"
+        ],
+        eraseStyle: this.random()
     }
   },
   methods: {
+    random: function () {
+      let myArray = ['select-all', 'backspace', 'select-back', 'clear']
+      let rand = myArray[Math.floor(Math.random() * myArray.length)]
+      return rand
+    },
     onComplete: function() {
+      return this.eraseStyle = this.random()
       // handle event when VueTyper has finished all typing/erasing
-      this.message = 'bye'
+      // this.message = 'bye'
     }
   }
 }
@@ -72,11 +86,17 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Anton|Inconsolata');
 
 .title-box h1 {
+  font-size: 1.8rem;
   text-transform: uppercase;
   font-family: 'Anton', sans-serif;
+  letter-spacing: 15px;
 }
 .title-box h4 {
   font-family: 'Inconsolata', monospace;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 0.8rem;
 }
 
 .main-title {
@@ -103,5 +123,11 @@ export default {
   top: 0;
   left: 0;
   z-index: 100;
+}
+
+.social {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: black;
 }
 </style>
