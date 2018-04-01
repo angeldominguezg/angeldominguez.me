@@ -42,11 +42,11 @@
           <hr/>
           <div class="text-center center-block">
             <br />
-              <a href="https://www.facebook.com/bootsnipp"><i class="fa fa-github social"></i></a>
-              <a href="https://www.facebook.com/bootsnipp"><i class="fa fa-linkedin social"></i></a>
-              <a href="https://www.facebook.com/bootsnipp"><i class="fa fa-instagram social"></i></a>
-              <a href="https://twitter.com/bootsnipp"><i class="fa fa-twitter social"></i></a>
-              <a href="mailto:bootsnipp@gmail.com"><i class="fa fa-envelope social"></i></a>
+              <a target="_blank" href="https://github.com/angeldominguezg"><i class="fa fa-github social"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/angeldominguezg"><i class="fa fa-linkedin social"></i></a>
+              <a target="_blank" href="http://instagram.com/angelddg"><i class="fa fa-instagram social"></i></a>
+              <a target="_blank" href="https://twitter.com/AngelDominguezG"><i class="fa fa-twitter social"></i></a>
+              <a href="mailto:angeldominguezg@gmail.com"><i class="fa fa-envelope social"></i></a>
           </div>
         </div>
       </b-col>
@@ -60,22 +60,19 @@ export default {
     return {
       message: [
         "SOFTWARE - DEVELOPER",
-        // "PASSIONATE - TECHNOLOGY",
+        "Coffee - Drinker ☕️",
         "FORWARD - THINKER"
         ],
-        eraseStyle: this.random()
+        eraseStyle: ''
     }
   },
   methods: {
-    random: function () {
-      let myArray = ['select-all', 'backspace', 'select-back', 'clear']
+    random: function (myArray) {
       let rand = myArray[Math.floor(Math.random() * myArray.length)]
       return rand
     },
     onComplete: function() {
-      return this.eraseStyle = this.random()
-      // handle event when VueTyper has finished all typing/erasing
-      // this.message = 'bye'
+      return this.eraseStyle = this.random(['select-all', 'backspace', 'select-back', 'clear'])
     }
   }
 }
