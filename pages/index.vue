@@ -1,27 +1,28 @@
 <template>
-  <b-container class="bv-example-row bv-example-row-flex-cols">
-    <no-ssr>
-      <vue-particles
-          color="#dedede"
-          :particleOpacity="0.7"
-          :particlesNumber="80"
-          shapeType="circle"
-          :particleSize="4"
-          linesColor="#dedede"
-          :linesWidth="1"
-          :lineLinked="true"
-          :lineOpacity="0.4"
-          :linesDistance="150"
-          :moveSpeed="3"
-          :hoverEffect="true"
-          hoverMode="grab"
-          :clickEffect="true"
-          clickMode="push"
-        >
-      </vue-particles>
-    </no-ssr>
-    <b-row>
-      <b-col align-self="center" class="main-title">
+<div class="contenedor">
+  <no-ssr>
+    <vue-particles
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+    </vue-particles>
+  </no-ssr>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
         <div class="title-box">
           <h1>Angel Dominguez</h1>
           <h4>
@@ -44,18 +45,20 @@
             </no-ssr>
           </h4>
           <hr/>
-          <div class="text-center center-block">
-            <br />
-              <a target="_blank" href="https://github.com/angeldominguezg"><i class="fa fa-github social"></i></a>
-              <a target="_blank" href="https://www.linkedin.com/in/angeldominguezg"><i class="fa fa-linkedin social"></i></a>
-              <a target="_blank" href="http://instagram.com/angelddg"><i class="fa fa-instagram social"></i></a>
-              <a target="_blank" href="https://twitter.com/AngelDominguezG"><i class="fa fa-twitter social"></i></a>
-              <a href="mailto:angeldominguezg@gmail.com"><i class="fa fa-envelope social"></i></a>
-          </div>
         </div>
-      </b-col>
-    </b-row>
-  </b-container>
+        <div class="text-center">
+          <b-col>
+            <a target="_blank" href="https://github.com/angeldominguezg"><i class="fa fa-github social"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/angeldominguezg"><i class="fa fa-linkedin social"></i></a>
+            <a target="_blank" href="http://instagram.com/angelddg"><i class="fa fa-instagram social"></i></a>
+            <a target="_blank" href="https://twitter.com/AngelDominguezG"><i class="fa fa-twitter social"></i></a>
+            <a href="mailto:angeldominguezg@gmail.com"><i class="fa fa-envelope social"></i></a>
+          </b-col>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -84,6 +87,23 @@ export default {
 
 <style>
 
+.container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.row {
+  width: 100%;
+}
+
+.container { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .title-box h1 {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -101,10 +121,9 @@ export default {
 }
 
 .main-title {
-  position: fixed;
-  top: 40%;
-  padding-left: 50px;
-  padding-right: 100px; 
+  /* margin-top: 50%; */
+  /* padding-left: 50px; */
+  /* padding-right: 100px;  */
 }
 
 #particles-js{
