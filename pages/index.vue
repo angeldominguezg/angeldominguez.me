@@ -87,7 +87,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Anton|Inconsolata');
 
 .title-box h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-family: 'Anton', sans-serif;
   letter-spacing: 15px;
