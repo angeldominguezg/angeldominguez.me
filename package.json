@@ -18,19 +18,19 @@
     "npm": "5.6.0"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.0.0",
-    "@nuxtjs/font-awesome": "^1.0.3",
-    "bootstrap": "^4.0.0-beta.2",
+    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/font-awesome": "^1.0.4",
+    "bootstrap": "^4.3.1",
     "bootstrap-vue": "^1.0.2",
-    "nuxt": "^1.0.0",
+    "nuxt": "^1.4.5",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "cross-env": "^5.0.1",
+    "babel-eslint": "^8.2.6",
+    "cross-env": "^5.2.1",
     "eslint": "^4.15.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint-plugin-vue": "^4.7.1",
     "vue-particles": "^1.0.9"
   }
 }
